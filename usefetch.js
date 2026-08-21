@@ -5,13 +5,13 @@ async function display() {
 
     try {
 
-        div.innerHTML = '<h2>Data is loading....</h2>';
+        div.innerHTML='<h2>Data is loading....</h2>';
 
-        const serverdata = await fetch(
+        const serverdata=await fetch(
             'https://fakestoreapi.com/products'
         );
 
-        const jsonData = await serverdata.json();
+        const jsonData=await serverdata.json();
 
         console.log(jsonData);
 
@@ -29,7 +29,7 @@ async function display() {
             </table>
         `;
 
-        const table = div.querySelector('table');
+        const table=div.querySelector('table');
 
         jsonData.forEach(product => {
 
@@ -66,7 +66,7 @@ async function display() {
 
         console.log(error);
 
-        div.innerHTML = `<h2>Something went wrong!</h2>`;
+        div.innerHTML=`<h2>Something went wrong!</h2>`;
     }
 }
 
